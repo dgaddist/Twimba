@@ -13,7 +13,11 @@ document.addEventListener("click", function (e) {
 });
 
 function handleLikeClick(tweetId) {
-  console.log(tweetId);
+  const targetTweetObj = tweetsData.filter(function (tweet) {
+    return tweet.uuid === tweetId;
+  })[0];
+  targetTweetObj.likes++;
+  console.log(tweetsData);
 }
 function getFeedHtml() {
   let feedHtml = ``;
