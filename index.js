@@ -17,7 +17,7 @@ function handleLikeClick(tweetId) {
     return tweet.uuid === tweetId;
   })[0];
   targetTweetObj.likes++;
-  console.log(tweetsData);
+  render();
 }
 function getFeedHtml() {
   let feedHtml = ``;
