@@ -47,7 +47,7 @@ function handleReplyClick(replyId) {
   document.getElementById(`replies-${replyId}`).classList.toggle("hidden");
 }
 function handleTweetBtnClick() {
-  console.log({
+  tweetsData.unshift({
     handle: `@Scrimba`,
     profilePic: `images/scrimbalogo.png`,
     likes: 0,
@@ -58,6 +58,7 @@ function handleTweetBtnClick() {
     isRetweeted: false,
     uuid: uuidv4(),
   });
+  render();
 }
 
 function getFeedHtml() {
