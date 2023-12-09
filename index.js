@@ -60,6 +60,7 @@ function handleTweetBtnClick() {
       uuid: uuidv4(),
     });
     render();
+    tweetInput.value = "";
   }
 }
 
